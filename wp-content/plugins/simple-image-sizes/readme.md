@@ -7,9 +7,9 @@
   
 **Requires at least:** 3.5
   
-**Tested up to:** 3.9
+**Tested up to:** 4.5
   
-**Stable tag:** 3.0.1
+**Stable tag:** 3.1.1
   
 
 ## Description ##
@@ -64,6 +64,34 @@ And then you can choose if the image is displayed on the media insertion or not 
 ](http://s.wordpress.org/extend/plugins/simple-image-sizes/screenshot-3.png)
 
 ## Changelog ##
+* 3.1.1
+    * Make translatable the link on admin featured image metabox
+    * Add filter to allow to remove the button : filter SIS/Admin/Post/Display_Thumbnail_Regenerate
+* 3.1.0
+    * Regenerate images from the featured image
+    * Use wp_send_json since the minimum WordPress version is 3.5
+* 3.0.10
+    * Remove text-domain on the header for language pack
+* 3.0.9
+    * Reuse the after_setup_theme for image size registering
+    * Code formatting and cleaning
+    * Check compatibility wth 4.3
+* 3.0.8
+    * Fix potential bug on error ajax
+    * Stop using init hook and use after_setup_theme for image size registering
+    * Update underscore cdn version for WP install without it
+    * Remove useless timer_start
+* 3.0.6
+    * Fix bug for the image adding
+* 3.0.5
+    * Fix bug on condition
+* 3.0.4
+	* Fix global add_image_size
+* 3.0.3
+	* Add Hebrew translations thanks to Atar4U
+* 3.0.2
+	* Fix version check for the image crop positions
+	* Add Hebrew translations thanks to Atar4U
 * 3.0.1
 	* Change the template render method for non apache webservers : https://wordpress.org/support/topic/fatal-error-1190?replies=6
 	* Remove ambigious ids for the css bugging WooCommerce : https://wordpress.org/support/topic/bad-css-style-administration and
