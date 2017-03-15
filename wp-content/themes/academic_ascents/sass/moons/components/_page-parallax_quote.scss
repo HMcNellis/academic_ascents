@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    ::Template Parallax Quote
+\*------------------------------------*/
+.quote-block{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    @include bp($solarsystem){
+        background-attachment: initial;
+    }
+}
+.quote__filter{
+    background-color: rgba($color-1, .4);
+}
+.quote{
+    clear: both;
+    position: relative;
+    .flexslider{
+        background: transparent;
+        border: none;
+    }
+    .flex-control-paging{
+        li{
+            a{
+                background: #fff;
+                border: 2px solid #fff; 
+                &.flex-active{
+                    background: #fff; 
+                    border: 2px solid $color-1;
+                    box-shadow: 0 0 0 .1em #fff;
+                }
+            }
+        }
+    }
+    .flex-control-nav{
+        bottom: auto;
+    }
+    .quote__inner{
+        padding: 2em $pad 0 $pad;
+    }
+    blockquote{
+        text-align: center;
+        color: #fff;
+        padding: 1em 0 0 0;
+        font-size: 1.5em;
+        letter-spacing: .1em;
+        position: relative;
+        font-family: open;
+        line-height: 1.5em;
+        @include bp($planetary){
+            font-size: 1.2em;
+            line-height: 1.2em;
+        }
+    }
+    .quote__author{
+        text-align: center;
+        color: #fff;
+        font-family: prolight;
+        font-size: 1em;
+    }
+}

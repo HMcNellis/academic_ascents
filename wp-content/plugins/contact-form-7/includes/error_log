@@ -1,0 +1,6 @@
+[11-Oct-2015 22:16:54] PHP Fatal error:  Call to undefined function  add_action() in /home2/acadenj5/public_html/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[11-Oct-2015 22:16:54] PHP Fatal error:  Call to undefined function  add_filter() in /home2/acadenj5/public_html/wp-content/plugins/contact-form-7/includes/mail.php on line 285
+[05-May-2016 20:06:32] PHP Fatal error:  Call to undefined function  add_action() in /home2/acadenj5/public_html/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[05-May-2016 20:06:34] PHP Fatal error:  Call to undefined function  add_filter() in /home2/acadenj5/public_html/wp-content/plugins/contact-form-7/includes/mail.php on line 285
+[10-Nov-2016 19:08:02] PHP Fatal error:  Call to undefined function  add_action() in /home2/acadenj5/public_html/wp-content/plugins/contact-form-7/includes/upgrade.php on line 3
+[10-Nov-2016 19:08:03] PHP Fatal error:  Call to undefined function  add_filter() in /home2/acadenj5/public_html/wp-content/plugins/contact-form-7/includes/mail.php on line 285

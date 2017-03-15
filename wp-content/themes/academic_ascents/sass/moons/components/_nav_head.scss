@@ -1,0 +1,387 @@
+/*------------------------------------*\
+    ::Nav in the Header
+\*------------------------------------*/
+.main-head{
+    position: relative;
+    .logo-case{
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        top: 1em;
+        .logo{
+            position: relative;
+            z-index: 30;
+            img{
+                width: 220px;
+                @include bp(1140px){
+                    width: 200px;
+                }
+                @include bp($planetary){
+                	width: 130px;
+                }
+            }
+        }
+        @include bp($planetary){
+            padding-top: .7em;
+            text-align: left;
+            top: .25em;
+            left: .25em;
+        }
+    }
+    .utility-nav{
+        width: 100%;
+        padding: 0 $pad;
+        text-align: right;
+        a{
+            color: $txt-color-1;
+            text-decoration: none;
+            border: 1px solid $color-3-dark;
+            padding: .5em;
+            display: inline-block;
+            position: relative;
+            &:hover{
+                color: $color-3;
+                &:after {
+                    left: 0;
+                }
+                p{
+                    color: $color-3;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                z-index: 0;
+                transition: (0.7s);
+                height: 100%;
+                top: 0;
+                bottom: -1px;
+                right: 0;
+                left: 100%;
+                background: #000;
+                backface-visibility: hidden;
+                overflow: hidden;
+            }
+            &:nth-of-type(1){
+                float: left;
+            }
+            &:nth-of-type(2){
+                margin-right: 1em;
+            }
+            span{
+                margin-right: .5em;
+                font-size: 1.5em;
+                vertical-align: middle;
+                position: relative;
+                z-index: 1;
+            }
+            p{
+                margin: 0;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+            }
+            @include bp($planetary){
+                @include col(2.7);
+                text-align: center;
+            }
+        }
+        @include bp($solarsystem){
+            text-align: left;
+            position: absolute;
+            top: 1em;
+            a{
+                padding-left: 1em;
+                padding-right: 1em;
+                &:nth-of-type(1){
+                    float: none;
+                    @include bp($planetary){
+                        float: left;
+                    }
+                }
+                &:nth-of-type(2){
+                    margin-right: .5em;
+                    margin-left: .5em;
+                    @include bp($planetary){
+                        margin: 0;
+                        border-right: none;
+                        border-left: none;
+                    }
+                }
+                span{
+                    margin: 0;
+                }
+                p{
+                    display: none;
+                }
+            }
+        }
+        @include bp($planetary){
+            padding: 0;
+            top: 0;
+            border-bottom: 1px solid $color-3-dark;
+            border-top: 1px solid $color-3-dark;
+            border-right: 1px solid $color-3-dark;
+            a{
+                border-bottom: none;
+                border-top: none;
+                span{
+                    font-size: 1.9em;
+                }
+            }
+        }
+    }
+    .main-head__nav{
+        margin-top: 90px;
+        padding: 0 2px;
+    }
+}
+.main-head__inner{
+    padding: 2em 0 1em 0;
+    @include bp($solarsystem){
+        padding: 4em 0;
+    }
+    @include bp($planetary){
+    	padding: 2em 0;
+    }
+}
+.m-nav {
+    position: absolute;
+    right: .5em;
+    top: 5em;
+    font-size: 2em;
+    color: $color-1-dark;
+    transition: 0.3s;
+    cursor: pointer;
+    @include bp ($min: 1025px){ //desktop only
+        display: none;
+    }
+    @include bp($planetary){
+        top: 3em;
+        right: 6%;
+    }
+    p{
+        display: inline-block;
+        margin: 0;
+        font-size: .9em;
+        @include bp($planetary){
+            display: none;
+        }
+    }
+    .hamburger{
+        display: inline-block;
+        width: 1.2em;
+        height: .1em;
+        background: $color-1-dark;
+        transition: 0.3s;
+        position: relative;
+        bottom: .2em;
+        margin-right: .5em;
+        &:before{
+            display: inline-block;
+            width: 1.2em;
+            height: .1em;
+            background: $color-1-dark;
+            transition: 0.3s;
+            position: absolute;
+            left: 0;
+            content: '';
+            transform-origin: 0.07143em center;
+            top: 0.25em;
+        }
+        &:after{
+            display: inline-block;
+            width: 1.2em;
+            height: .1em;
+            background: $color-1-dark;
+            transition: 0.3s;
+            position: absolute;
+            left: 0;
+            content: '';
+            transform-origin: 0.07143em center;
+            top: -0.25em;
+        }
+        &.x-in-disguise{
+            background: rgba($color-1-dark, 0);
+            &:before, &:after{
+              transform-origin: 50% 50%;
+              top: 0;
+            }
+            &:before{
+              transform: rotate3d(0,0,1,45deg); 
+            }
+            &:after{
+              transform: rotate3d(0,0,1,-45deg);
+            }
+        }
+        @include bp($planetary){
+            width: 1.6em;
+            &:before,
+            &:after{
+                width: 1.6em;
+            }
+        }
+    }
+}
+.head-nav {
+    text-align: right;
+    ul{
+        padding: 0;
+        text-transform: uppercase;
+        font-family: open;
+        letter-spacing: .02em;
+        li{
+            ul{
+                &:after{
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+        li{
+            width: 177px;
+            font-size: 18px;
+            &.menu-item-9,
+            &.menu-item-10{
+                float: left;
+                text-align: left;
+            }
+            &.menu-item-8,
+            &.menu-item-11{
+                .sub-menu{
+                    li{
+                        text-align: right;
+                        @include bp($solarsystem){
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                background-color: #000;
+                a{
+                    color: #fff;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: $txt-color-1;
+                padding: .5em $pad;
+                display: block;
+                &:hover{
+                    color: $color-3;
+                }
+            }
+            .sub-menu{
+                text-align:center;
+                background-color: #000;
+                display: block;
+                border-top: 1px solid $color-3-dark;
+                li{
+                    text-align: left;
+                    display: block;
+                    clear: both;
+                    a{
+                        color: #fff;
+                        &:hover{
+                            color: $color-3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include bp ($min: 1025px){ //desktop only
+    	@include nav(
+    	    $type: 'dropdown',           		//nav type: dropdown or nested
+    	    $fade: .3s,                  		//fade speed (take out for no animation)
+    	    $easy-hover: 50px,           		//amount of invisible overflow for sub menu (take out to not use)
+    	    $easy-hover-top: 1.2em       		//set top easy-hover value (you can also set $easy-hover-right, -bottom, and -left separately)
+    	);
+    }
+    @include bp($solarsystem){
+        transition: 400ms;
+        position: absolute;
+        right: 0;
+        top: 12.6em;
+        overflow: hidden;
+        width: 0;
+        &.heynav {
+            transition: 400ms;
+            width: 45%;
+            z-index: 35;
+        }
+        ul{
+            text-align: left;
+            float: none;
+            background-color: rgba(#000, .9);
+            padding: 1em;
+            list-style: none;
+            li{
+                padding: 0;
+                width: 100%;
+                white-space: nowrap;
+                clear: both;
+                position: relative;
+                a{
+                    display: block;
+                    padding: 1em;
+                    width: 100%;
+                    color: #fff;
+                    &:hover{
+                        color: #fff;
+                        background-color: $color-3;
+                    }
+                }
+                &.hey_sub-nav{
+                    transition: .3s;
+                    .sub-menu{
+                        overflow: visible;
+                        display: inline-block;
+                    }
+                    &:before{
+                        transform: rotate(90deg);
+                    }
+                }
+                &.menu-item-has-children {
+                    &:before{
+                        font-family: icons;
+                        content: '\f100';
+                        position: absolute;
+                        right: 2em;
+                        padding: 1em;
+                        color: #fff;
+                        transition: 400ms;
+                        z-index: 1;
+                        &.arrowactive{
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .sub-menu {
+                    display: none;
+                    width: 100%;
+                    margin: 0;
+                    border-top: none;
+                    overflow: hidden;
+                    transition: 300ms;
+                    padding: 0;
+                    li {
+                        text-indent: 1em;
+                        a{
+                            padding: .5em 1em;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+    @include bp($planetary){
+        top: 8.6em;
+        &.heynav{
+            width: 100%;
+        }
+    }
+}

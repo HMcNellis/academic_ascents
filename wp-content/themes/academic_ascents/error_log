@@ -1,0 +1,4 @@
+[21-Sep-2015 05:23:44] PHP Fatal error:  Call to undefined function  get_header() in /home2/acadenj5/public_html/wp-content/themes/academic_ascents/index.php on line 17
+[03-Oct-2015 00:29:38] PHP Fatal error:  Call to undefined function  get_header() in /home2/acadenj5/public_html/wp-content/themes/academic_ascents/index.php on line 17
+[03-Dec-2015 00:10:28] PHP Fatal error:  Call to undefined function  get_header() in /home2/acadenj5/public_html/wp-content/themes/academic_ascents/404.php on line 10
+[21-May-2016 07:02:30] PHP Fatal error:  Call to undefined function  get_header() in /home2/acadenj5/public_html/wp-content/themes/academic_ascents/404.php on line 10

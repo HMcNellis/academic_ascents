@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    ::Template Content Block styles
+\*------------------------------------*/
+.content-block_blue{
+    background-color: $color-1;
+    position: relative;
+}
+.content-block_white{
+    background-color: #fff;
+    position: relative;
+}
+.content-block_green{
+    background-color: $color-3;
+    position: relative;
+}
+.cta-button_wrap{
+    margin: 2em 0 2em 0;
+    width: 80%;
+}
+.border-top{
+    .content-block__inner{
+        border-top: 1px solid $color-2;
+        &:before{
+            position:relative;
+            top: -1.8em;
+            background-color: $color-2;
+            height: 4px;
+            width: 100%;
+            @include bp($solarsystem){
+                top: .2em;
+            }
+        }
+    }
+}
+.content-block__title{
+    padding-right: $pad;
+    padding-left: $pad;
+    margin: 0;
+    p{
+        font-family: museo;
+        color: #3a3a3c;
+        font-size: 1.5em;
+        margin: 0 0 .5em 0;
+        text-align: center;
+    }
+    @include bp($solarsystem){
+        text-align: center;
+    }
+}
+.content-block_img-align{
+    p{
+        margin: 0;
+    }
+    img{
+        vertical-align: bottom;
+    }
+}
+.content-block_img-align{
+    .content-block__inner{
+        padding-bottom: 0;
+    }
+    &.thirds--2 [class*=" thirds__group--"].thirds__group{
+        width: 49%;
+        display: inline-block;
+        vertical-align: bottom;
+        float: none;
+        @include bp(680px){
+            width: 100%;
+        }
+    }
+}
+article:first-of-type{
+    .content-block__inner{
+        padding-top: 2em;
+    }
+}
+.GEsection{
+    h2,
+    p{
+        font-family: geins;
+    }
+    .btn{
+        margin-bottom: $pad;
+    }
+}
+.padding-top{
+    padding-top: 4.5em;
+    @include bp(1300px){
+        padding-top: 3.5em;
+    }
+    @include bp($planetary){
+        padding-top: 7.5em;
+    }
+}

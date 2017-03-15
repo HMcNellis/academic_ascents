@@ -1,0 +1,148 @@
+/*------------------------------------*\
+    ::Hero
+\*------------------------------------*/
+.hero-background{
+    background-color: #000;
+    @include bp(700px){
+        padding-top: 0;
+    }
+}
+.hero {
+    position: relative;
+    margin: 0 auto;
+    max-width: 2494px; //hero image actual width
+    background-position: center;
+    padding-left: 0;
+    overflow: hidden; 
+    padding: 1em 0;   
+    li{
+        list-style: none;
+    }
+    @include bp(841px){
+        height: 300px;
+        padding: 0;
+    }
+}
+.hero--single,
+.hero__slide-item{
+    background-size: cover;
+    @include bp(841px){
+        height: 300px;
+    }
+}
+.hero__inner {
+    height: 475px;
+    max-width: 1380px;
+    width: 1140px;
+    &:before {
+        content: "";
+        height: 15%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    h3{
+        font-family: openlight;
+        color: #fff;
+        text-shadow: .05em .05em .2em #333;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        letter-spacing: .1em;
+    }
+    h2{
+        font-family: open;
+        color: #fff;
+        text-shadow: .05em .05em .2em #333;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        margin-top: 0;
+        margin-bottom: .5em;
+        letter-spacing: .1em;
+    }
+    span{
+        font-family: openlight;
+        color: #fff;
+        text-shadow: .05em .05em .5em #333;
+        line-height: 2.3em;
+        letter-spacing: .1em;
+        @include bp($planetary){
+            display: none;
+        }
+    }
+    @include bp(1140px){
+        width: 100%;
+    }
+    @include bp(841px){
+        &:before{
+            height: 0;
+        }
+        .btn{
+            display: none;
+        }
+    }
+    @include bp($planetary){
+        height: 500px;
+    }
+}
+.hero__text-right {
+    float: right;
+    padding: 1em;
+    margin-top: 5em;
+    width: 50%;
+    &.background{
+        background-color: rgba(#000, .75);
+    }
+    @include bp(841px){
+        width: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+.hero__text-left {
+    margin-right: 10%;
+    margin-top: 5em;
+    width: 50%;
+    float: left;
+    padding: 1em;
+    &.background{
+        background-color: rgba(#000, .75);
+    }
+    @include bp(940px){
+        padding-right: 5%;
+    }
+    @include bp(841px){
+        width: 100%;
+        padding-right: 0;
+        padding-top: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+.hero__small-img{
+    float: left;
+    width: 50%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-top: 4em;
+    @include bp(841px){
+        margin: 0 auto;
+        float: none;
+        padding-left: 0;
+    }
+    @include bp($planetary){
+        width: 100%;
+    }
+}
+.slides {
+    padding-left: 0;
+}
+
+/*------------------------------------*\
+    ::Slider
+\*------------------------------------*/
+.hero__slide-item {
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

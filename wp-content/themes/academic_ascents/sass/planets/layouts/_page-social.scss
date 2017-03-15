@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    ::Social Styling
+\*------------------------------------*/
+.social__buttons{
+    ul {
+        list-style: none;
+        padding: {left:0;}
+        width: 100%;
+    }
+    li{
+        display: inline-block;
+        width: 19.3%;
+        @include bp(647px){
+            width: 18.5%;
+        }
+    }
+    a{
+        padding: 1em 0;
+        display: block;
+        p{
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            span:before{
+                font-size: 1.7em;
+                vertical-align: middle;
+                margin-right: 1em;
+            }
+            @include bp($solarsystem){
+                span:before{
+                    margin-right: 0;
+                }
+                span.text{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .facebook{
+        background: #3b5998;
+        position: relative;
+        transition: .3s;
+        &:hover{
+            transform: scale(1.05);
+            transition: .3s;
+        }
+    }
+    .linkedin{
+        background: #007bb6;
+        position: relative;
+        transition: .3s;
+        &:hover{
+            transform: scale(1.05);
+            transition: .3s;
+        } 
+    }
+    .twitter{
+        background: #00aced;
+        position: relative;
+        transition: .3s;
+        &:hover{
+            transform: scale(1.05);
+            transition: .3s;
+        }
+    }
+    .googleplus{
+        background: #dd4b39;
+        position: relative;
+        transition: .3s;
+        &:hover{
+            transform: scale(1.05);
+            transition: .3s;
+        } 
+    }
+    .pinterest{
+        background: #cb2027;
+        position: relative;
+        transition: .3s;
+        &:hover{
+            transform: scale(1.05);
+            transition: .3s;
+        }
+    }  
+}

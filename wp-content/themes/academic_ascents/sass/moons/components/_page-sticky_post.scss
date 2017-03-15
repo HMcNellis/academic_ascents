@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    ::Sticky Posts Layout
+\*------------------------------------*/
+.sticky-post{
+    background-color: #fff;
+}
+.sticky-post__inner{
+    padding: $pad;
+    text-align: center;
+}
+.sticky-posts__group{
+    width: 33%;
+    display: inline-block;
+    padding: 1%;
+    transform: scale(0);
+    transition: 1s;
+    &.fading{
+        transform: scale(1);
+        transition: 1s;
+    }
+    @include bp($solarsystem){
+        transform: scale(1);
+        p{
+        	display: none;
+        }
+    }
+    @include bp(824px){
+        width: 32.8%;
+    }
+    @include bp(750px){
+        width: 48%;
+    }
+    @include bp($planetary){
+    	width:100%;
+    	border-bottom:1px solid #77bc43;
+    }
+}

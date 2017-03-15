@@ -1,0 +1,151 @@
+/*------------------------------------*\
+    ::Template Content Block
+\*------------------------------------*/
+.content-block__inner{
+    padding: 2em 0 2em 0;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    iframe{
+        max-width: 100%;
+    }
+}
+.thirds {
+    background-repeat: no-repeat;
+    @include bp($solarsystem){
+        background-size: 100%;
+    }
+}
+.thirds--1 {
+    .thirds__group--1 {
+        @include col(12);
+    }
+}
+.thirds--2 {
+    overflow:hidden;
+    &.imgright{
+        .thirds__group--2 {
+            img{
+                transform: translateX(0);
+                transition: transform 1000ms;
+                &.imghide{
+                    transform: translateX(300%);
+                    transition: none;
+                    @include bp($solarsystem){
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+    &.imgleft{
+        .thirds__group--1{
+            img{
+                transform: translateX(0);
+                transition: transform 1000ms;
+                &.imghide{
+                    transform: translateX(-300%);
+                    transition: none;
+                    @include bp($solarsystem){
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+    &.thirds__two-col--half {
+        .thirds__group {
+            @include col(6);
+            &.thirds__group--no-prev {
+                margin-left: 50%;
+            }
+        }
+    }
+    &.thirds__two-col--two {
+        .thirds__group--1 {
+            @include col(8);
+        }
+        .thirds__group--2 {
+            @include col(4);
+            &.thirds__group--no-prev {
+                margin-left: 66.66667%;
+            }
+        }
+    }
+    &.thirds__two-col--one {
+        .thirds__group--1 {
+            @include col(4);
+        }
+        .thirds__group--2 {
+            @include col(8);
+            &.thirds__group--no-prev {
+                margin-left: 33.33333%;
+            }
+        }
+    }
+    @include bp($solarsystem){
+        [class*=" thirds__group--"]{ //it's a specificity thing
+            &.thirds__group {
+                width: 50%;
+                &[class*="no-prev"]{
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+    @include bp(700px){
+        [class*=" thirds__group--"]{ //it's a specificity thing
+            &.thirds__group {
+                width: 100%;
+                &[class*="no-prev"]{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.thirds--2 {
+    &.thirds__two-col--half {
+        &.thirds__two-full{
+            @include bp($solarsystem){
+                [class*=" thirds__group--"]{
+                   &.thirds__group {
+                       width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}
+.thirds--3 {
+    .thirds__group {
+        @include col(4);
+        &.thirds__group--no-prev {
+            margin-left: 33.33333%;
+        }
+        &.thirds__group--no-prev-2 {
+            margin-left: 66.66667%;
+        }
+        @include bp($solarsystem){
+            width: 100%;
+            &[class*="no-prev"]{
+                margin-left: 0;
+            }
+        }
+    }
+}
+.thirds--slider {
+    .thirds__slide-item {
+        padding: {left: $pad; right: $pad;};
+    }
+}
+.thirds__slider-wrap {
+    float: left;
+    width: 100%;
+}
+.thirds__slide-item {
+    @include box-sizing(content-box);
+}

@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    ::Torso With Sidebar
+\*------------------------------------*/
+[class*="torso--sidebar"] {
+    [class*="torso__content"]{
+		@include grid-column(8);
+        @include bp($solarsystem){
+            @include grid-column(12); 
+        }
+    }
+    [class*="torso__sidebar"]{
+        @include grid-column(4);
+        background-color: #eee;
+        background-size: cover;
+        ul{
+            list-style: none;
+            h3{
+                color: $color-2-dark;
+                margin: .4em 0;
+            }
+            ul{
+                padding: 0;
+            }
+        }
+        @include bp($solarsystem){
+            display: none;
+        }
+    }
+}
+.masthead__image{
+	height: 475px;
+	background-size: cover;
+	repeat: no-repeat;
+	background-position:center;
+	background-color: $color-3;
+	@include bp($planetary){
+		height: 275px;
+		background-position: center;
+	}
+}
+.single-torso_content{
+	p{
+		margin-top: 0;
+	}
+	img{
+		float: left;
+		padding: 0 $pad $pad 0;
+	}
+}
+.single-torso__inner{
+    padding: $pad;
+}
+.cat-torso__inner{
+	padding-top: 1em;
+}
+.single-torso__post{
+    background-color: #eee;;
+    background-size: cover;
+    margin-bottom: 1em;
+    padding: 0 $pad;
+    float: left;
+    width: 100%;
+    h1{
+    	text-align: left;
+    }
+}
+.single-torso__posted{
+    font-family: pro;
+    color: #545454;
+    span{
+        a{
+            color: #545454;
+        }
+    }
+}
+.author__title,
+.tag-torso__title,
+.cat-torso__title,
+.arch-torso__title{
+    padding: 0 $pad;
+}
+.single__container{
+    background-color: #eee;;
+    background-size: cover;
+    padding: 1em;
+    position: relative;
+    top: -7em;
+}
+.comment-form{
+    input:not([type="submit"]),
+    textarea{
+        width: 100%;
+    }
+}
+.comments__list{
+    ul{
+        list-style: none;
+    }
+    h2{
+        color: $color-1-dark;
+    }
+    h3{
+        color: $color-3;
+    }
+}
+.comment__body{
+    margin-bottom: 1em;
+}

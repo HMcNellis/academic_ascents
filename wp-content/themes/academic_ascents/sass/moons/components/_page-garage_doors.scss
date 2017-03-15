@@ -1,0 +1,151 @@
+/*------------------------------------*\
+    ::Template Four CTAs
+\*------------------------------------*/
+.garage-door{
+    background-color: #fff;
+}
+.four-content{ 
+    @include col(12);
+    text-align: center;
+}
+.four-cta{
+    background-color:#fff;
+    position: relative;
+}
+.four-cta__inner{
+    padding-top: 3em;
+    padding-bottom: 2em;
+    @include bp($solarsystem){
+        padding-top: 0;
+    }
+}
+.cta-case{
+    width: 100%;
+    float: left;
+    display: block;
+    text-align: center;
+}
+.cta-wrap{
+    @include col(2.95, $collapse:true);
+    float: none;
+    display: inline-block;
+    padding: 0 5px;
+    height: 18em;
+    margin: .5em 0;
+    position: relative;
+    @include bp(860px){
+        padding-left:0;
+        padding-right:0;
+        width:32.9%;
+    }
+    @include bp(650px){
+        @include col(6, $collapse:true);
+    }
+    @include bp($planetary){
+        @include col(12, $collapse:true);
+        margin: 5px 0;
+    }
+}
+.cta-cover{
+    height: 18em;
+    background-color: $color-3;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 3px;
+    right: 3px;
+    transition: .3s;
+    overflow: hidden;
+    h3{
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        padding: 0 $pad;
+        font-family: open;
+        text-transform: uppercase;
+        font-size: 1.1em;
+    }
+    p{
+        color: #fff;
+        text-align: center;
+        margin: 0 $pad;
+        padding: 0;
+        font-family: prolight;
+        font-size: 1em;
+        line-height: 1.25em;
+        @include bp($solarsystem){
+            font-size: .9em;
+        } 
+    }
+    @include bp($min:1025px){
+        &.cta-reveal{
+            height: 5.5em;
+            overflow: hidden;
+            transition: .3s;
+            .cta-cover_text{
+                padding-top: 2em;
+                p{
+                    padding-bottom: 1em;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+    }
+}
+.cta-inside{
+    height: 18em;
+    padding:  6em $pad $pad $pad;
+    background-color: $color-3;
+    position: absolute;
+    top: 0;
+    left: 3px;
+    right: 3px;
+    p{
+        line-height: 1.2em;
+        color: #fff;
+        margin: .5em 0 .5em 0;
+        font-size: 1em;
+        text-align: left;
+        &:nth-of-type(2){
+            text-align: center;
+            text-decoration: underline;
+            &:hover{
+                color: $color-1;
+            }
+        }
+    }
+    a{
+        font-size: 1.3em;
+        color: $color-1;
+        cursor:pointer;
+        &:hover{
+            color: $color-2;
+        }
+    }
+    @include bp($solarsystem){
+        display:none;
+    }
+}
+.cta__img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    position: relative;
+    height: 220px;
+}
+.cta__film{
+    background-color: rgba($color-1, .5);
+    position: relative;
+}
+.cta-cover_text{
+    position: absolute;
+    padding-bottom: .5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-3;
+}

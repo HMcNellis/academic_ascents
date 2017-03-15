@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    ::Pagination
+\*------------------------------------*/
+.pagination {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin-top: 1em;
+    padding-left: $pad;
+    padding-right: 11em;
+    .page-numbers {
+        display: inline-block;
+        min-width: 1.5em;
+        height: 2em;
+        margin-bottom: .5em;
+        padding: .5em .3em;
+        background-color: $color-3;
+        text-align: center;
+        font-weight: bold;
+        color: $color-1;
+        text-decoration: none;
+        font-size: .9em;
+        transition: (all .3s);
+        &:link, &:visited {
+            text-decoration: none;
+        }
+        &.current{
+            background-color: $color-1;
+            color: $color-3;
+        }
+        &:hover:not(.dots),
+        &:active:not(.dots),
+        &:focus {
+            background-color: $txt-color-2;
+            color: $color-3;
+        }
+        @include bp($planetary){
+            padding: .7em;
+            height: auto;
+        }
+    }
+    .next,
+    .prev {
+        position: absolute;
+        width: 5em;
+        text-align: center;
+        top: 0;
+        @include bp($solarsystem) {
+            display: none;
+
+        }
+    }
+    .next {
+        right: 0;
+    }
+    .prev {
+        right: 5.25em;
+    }
+    @include bp($solarsystem){
+        padding-right: 0;
+    }
+}

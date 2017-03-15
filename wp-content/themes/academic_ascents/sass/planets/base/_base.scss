@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    ::Base
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+body {
+	margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.main-torso{
+	.wpcf7{
+		input[type="submit"],
+		.btn{
+		    display: inline-block;
+		    color: #fff;
+		    padding: .7em 1em;
+		    background-color: $color-1;
+		    border: 1px solid $color-1-light;
+		    text-decoration:none;
+		    letter-spacing: .1em;
+		    font-size: .9em;
+		    font-weight: normal;
+		    text-align: center;
+		    transition:(background-color 300ms, border-color 300ms);
+		    box-shadow:(0 1em 2em $color-1-light inset);
+		    border-radius:(.2em);
+		    &:hover,
+		    &:active,
+		    &:focus {
+		        background-color: $color-1;
+		        box-shadow:(0 -1em 2em $color-1-dark inset);
+		        color: #fff;
+		    }
+		    @include bp($planetary){
+		        font-size: .7em;
+		    }
+		}
+		input:not([type="submit"]),
+		textarea{
+			padding: .5em;
+		}
+	}
+}

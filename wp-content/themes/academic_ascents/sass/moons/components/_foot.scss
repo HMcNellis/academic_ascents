@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    ::Footer
+\*------------------------------------*/
+@include sticky-footer(
+    $wrap: '.wrap-all-the-things',
+    $row:  '.main-head, .main-torso, .main-foot',
+    $flex: '.main-torso'
+);
+.main-foot{
+	background: #000;
+	ul{
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		font-family: open;
+	}
+	.nav__inner{
+		padding: $pad;
+		text-align: center;
+		span{
+			a:hover{
+				img{
+					transform: scale(1.1);
+					backface-visibility: hidden;
+				}
+			}
+		}
+		a{
+			padding: $pad;
+		}
+	}
+	p{
+		color: #fff;
+		float: right;
+		margin: 0;
+		padding: $pad;
+		font-family: prolight;
+		letter-spacing: .01em;
+	}
+	@include bp(820px){
+		.foot-nav{
+			li{
+				display:inline-block;
+				float:none;
+			}
+		}
+	}
+	@include bp(700px){
+		p{
+			float: none;
+			text-align: center;
+		}
+		.nav__inner{
+			span{
+				float: none;
+				margin-top: 1em;
+				display: block;
+			}
+		}
+		.foot-nav{
+			ul{
+				float: none;
+			}
+			li{
+				float: none;
+				text-align: center;
+				display:block;
+			}
+			a{
+				padding: .5em;
+			}
+		}
+	}
+}
