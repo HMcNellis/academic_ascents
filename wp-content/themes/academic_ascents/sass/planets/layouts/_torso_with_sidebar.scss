@@ -63,9 +63,14 @@
     h1{
     	text-align: left;
     }
+    .single-torso_content{
+        img{
+            width: 100%;
+        }
+    }
 }
 .single-torso__posted{
-    font-family: pro;
+    font-family: $fam-body;
     color: #545454;
     span{
         a{

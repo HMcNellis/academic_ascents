@@ -16,17 +16,17 @@ dfn {
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
-	font-family: open;
+	font-family: $fam-heading;
 	text-align: center;
 	text-transform: uppercase;
 }
 .main-torso{
 	h2{
-		font-family: openlight;
+		font-family: $fam-heading;
 	}
 	h4{
 		text-align: center;
-		font-family: open;
+		font-family: $fam-heading;
 		text-transform: uppercase;
 		color: $color-1-dark;
 		font-size: 1.8em;
@@ -47,13 +47,13 @@ h1 {
 		}
 	}
 	h5{
-		font-family: pro;
+		font-family: $fam-heading;
 		font-size: 1.5em;
 		color: $color-1;
 		margin-top: 15px;
 	}
 	h6{
-		font-family: open;
+		font-family: $fam-heading;
 		text-transform: uppercase;
 		color: $color-1-dark;
 		font-size: 1.8em;
@@ -64,9 +64,8 @@ h1 {
 	ul,
 	ol,
 	p{
-		font-family: prolight;
+		font-family: $fam-body;
 		font-size: 1.1em;
-		line-height: 2em;
 	}
 }
 .section-title{

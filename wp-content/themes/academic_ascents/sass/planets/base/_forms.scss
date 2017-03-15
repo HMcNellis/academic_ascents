@@ -11,6 +11,9 @@ textarea {
 	color: inherit;
 	font: inherit;
 	margin: 0;
+	&:focus{
+		outline: none;
+	}
 }
 button {
 	overflow: visible;
@@ -66,8 +69,12 @@ legend {
 	border: 0;
 	padding: 0;
 }
+input:not([type="submit"]){
+	border: none;
+}
 textarea {
 	overflow: auto;
+	border: none;
 }
 optgroup {
 	font-weight: bold;

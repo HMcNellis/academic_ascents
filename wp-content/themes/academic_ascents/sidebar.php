@@ -12,7 +12,7 @@
     <li>
         <h3><?php echo 'Archives'; ?></h3>
         <ul>
-            <?php wp_get_archives('type=monthly'); ?>
+            <?php wp_get_archives('type=yearly'); ?>
         </ul>
     </li>
 

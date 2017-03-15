@@ -11,12 +11,16 @@
 .sticky-posts__group{
     width: 33%;
     display: inline-block;
+    vertical-align: top;
     padding: 1%;
     transform: scale(0);
     transition: 1s;
     &.fading{
         transform: scale(1);
         transition: 1s;
+    }
+    p{
+        color: $txt-color-1;
     }
     @include bp($solarsystem){
         transform: scale(1);

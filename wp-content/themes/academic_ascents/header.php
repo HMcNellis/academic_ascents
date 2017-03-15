@@ -24,6 +24,12 @@
 
     <?php wp_head(); //mandatory ?>
     <?php get_template_part('templates/parts/header', 'analytics'); ?>
+    <div class="hide">
+        <?php 
+            $svgpath = get_template_directory() . "/images/general-sprite/symbol/svg/sprite.symbol.svg"; 
+            include_once($svgpath); 
+        ?>
+    </div> <!-- // hide -->
 </head>
 
 <body <?php body_class('page-'.$post->post_name); ?>>

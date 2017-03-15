@@ -48,13 +48,13 @@ $pad:       0.9375rem;
 \*------------------------------------*/
 
 //font colors
-$txt-color-1:       $color-1-dark;
+$txt-color-1:       $black;
 $txt-color-2:       $color-1-dark;
 $txt-color-3:       $color-3-dark;
 
 //font families
-$fam-heading:       "Century Gothic", sans-serif;
-$fam-body:          palatino, serif;
+$fam-heading:       raleway;
+$fam-body:          opensans;
 $fam-nav:           $fam-body;
 
 //internal/page anchor tags

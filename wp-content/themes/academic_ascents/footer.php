@@ -22,7 +22,18 @@
                     );
                     wp_nav_menu($attr);
                 ?>
-                <span><a href="https://plus.google.com/100495753123082046193" rel="publisher" title="Google+" target="_blank"><img src="http://academicascents.com/wp-content/themes/academic_ascents/images/googleplus.png" width="36px"></a><a href="https://www.facebook.com/academicascents?notif_t=fbpage_fan_invite" title="Facebook" target="_blank"><img src="http://academicascents.com/wp-content/themes/academic_ascents/images/facebook.png" width="36px"></a></span>
+                <span>
+                    <a href="https://plus.google.com/101797558817707317403" title="Google+" target="_blank" rel="nofollow">
+                        <svg>
+                            <use xlink:href="#google-plus"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/academicascents?notif_t=fbpage_fan_invite" title="Facebook" target="_blank" rel="nofollow">
+                        <svg>
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </span>
                 <p>Academic Ascents © Copyright <?php echo date('Y'); ?></p>
             </div>
         </div>

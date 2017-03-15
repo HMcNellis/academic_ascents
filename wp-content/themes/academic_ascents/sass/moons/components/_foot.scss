@@ -12,21 +12,18 @@
 		margin: 0;
 		padding: 0;
 		text-transform: uppercase;
-		font-family: open;
+		font-family: $fam-heading;
 	}
 	.nav__inner{
 		padding: $pad;
 		text-align: center;
-		span{
-			a:hover{
-				img{
-					transform: scale(1.1);
-					backface-visibility: hidden;
-				}
-			}
-		}
 		a{
 			padding: $pad;
+		}
+		span{
+			a{
+				padding: 0;
+			}
 		}
 	}
 	p{
@@ -34,8 +31,17 @@
 		float: right;
 		margin: 0;
 		padding: $pad;
-		font-family: prolight;
+		font-family: $fam-body;
 		letter-spacing: .01em;
+	}
+	svg{
+		display: inline-block;
+		width: 64px;
+		height: 64px;
+		fill: $white;
+		&:hover{
+			fill: $color-3;
+		}
 	}
 	@include bp(820px){
 		.foot-nav{

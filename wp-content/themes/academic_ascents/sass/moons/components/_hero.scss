@@ -26,6 +26,7 @@
 .hero--single,
 .hero__slide-item{
     background-size: cover;
+    background-position: center;
     @include bp(841px){
         height: 300px;
     }
@@ -41,7 +42,7 @@
         vertical-align: middle;
     }
     h3{
-        font-family: openlight;
+        font-family: $fam-heading;
         color: #fff;
         text-shadow: .05em .05em .2em #333;
         text-transform: uppercase;
@@ -49,7 +50,7 @@
         letter-spacing: .1em;
     }
     h2{
-        font-family: open;
+        font-family: $fam-body;
         color: #fff;
         text-shadow: .05em .05em .2em #333;
         text-transform: uppercase;

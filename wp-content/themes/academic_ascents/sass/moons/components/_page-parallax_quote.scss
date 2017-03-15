@@ -51,7 +51,7 @@
         font-size: 1.5em;
         letter-spacing: .1em;
         position: relative;
-        font-family: open;
+        font-family: $fam-heading;
         line-height: 1.5em;
         @include bp($planetary){
             font-size: 1.2em;
@@ -61,7 +61,7 @@
     .quote__author{
         text-align: center;
         color: #fff;
-        font-family: prolight;
+        font-family: $fam-body;
         font-size: 1em;
     }
 }
