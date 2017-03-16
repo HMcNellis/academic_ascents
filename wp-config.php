@@ -18,10 +18,10 @@ if(file_exists(dirname(__FILE__) . '/zen-config.php') && include('zen-config.php
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'acadenj5_ascents');
+define('DB_NAME', 'academic_ascents');
 
 /** MySQL database username */
-define('DB_USER', 'acadenj5_ascents');
+define('DB_USER', 'academic_ascents');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'tHafa7aSutac');

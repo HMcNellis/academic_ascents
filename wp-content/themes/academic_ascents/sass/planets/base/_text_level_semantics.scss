@@ -95,7 +95,9 @@ sub {
 a{
 	color: $color-1;
 	text-decoration: none;
+	transition: .3s;
 	&:hover{
 		color: #0a4378;
+		transition: .3s;
 	}
 }

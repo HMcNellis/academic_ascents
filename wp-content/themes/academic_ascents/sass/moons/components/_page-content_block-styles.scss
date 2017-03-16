@@ -5,6 +5,10 @@
     background-color: $color-1;
     position: relative;
     color: $white;
+    textarea,
+    input{
+        color: $txt-color-1;
+    }
 }
 .content-block_white{
     background-color: #fff;
@@ -14,6 +18,10 @@
     background-color: $color-3;
     position: relative;
     color: $white;
+    textarea,
+    input{
+        color: $txt-color-1;
+    }
 }
 .cta-button_wrap{
     margin: 2em 0 2em 0;
@@ -92,5 +100,12 @@ article:first-of-type{
     }
     @include bp($planetary){
         padding-top: 7.5em;
+    }
+}
+.float{
+    @include bp($solarsystem){
+        img{
+            float: none;
+        }
     }
 }

@@ -41,7 +41,9 @@
             padding: .5em;
             display: inline-block;
             position: relative;
+            transition: .3s;
             &:hover{
+                transition: .3s;
                 color: $color-3;
                 &:after {
                     left: 0;
@@ -243,6 +245,7 @@
         li{
             width: 177px;
             font-size: 18px;
+            transition: .3s;
             &.menu-item-9,
             &.menu-item-10{
                 float: left;
@@ -260,8 +263,10 @@
                 }
             }
             &:hover{
-                background-color: #000;
+                background-color: $color-3;
+                transition: .3s;
                 a{
+                    transition: .3s;
                     color: #fff;
                 }
             }
@@ -270,9 +275,11 @@
                 color: $txt-color-1;
                 padding: .5em $pad;
                 display: block;
-                &:hover{
-                    color: $color-3;
-                }
+                transition: .3s;
+                // &:hover{
+                    
+                //     transition: .3s;
+                // }
             }
             .sub-menu{
                 text-align:center;
@@ -285,7 +292,9 @@
                     clear: both;
                     a{
                         color: #fff;
+                        transition: .3s;
                         &:hover{
+                            transition: .3s;
                             color: $color-3;
                         }
                     }
@@ -330,7 +339,9 @@
                     padding: 1em;
                     width: 100%;
                     color: #fff;
+                    transition: .3s;
                     &:hover{
+                        transition: .3s;
                         color: #fff;
                         background-color: $color-3;
                     }

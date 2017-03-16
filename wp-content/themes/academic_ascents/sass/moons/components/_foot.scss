@@ -39,8 +39,10 @@
 		width: 64px;
 		height: 64px;
 		fill: $white;
+		transisiton: .3s;
 		&:hover{
 			fill: $color-3;
+			transition: .3s;
 		}
 	}
 	@include bp(820px){
