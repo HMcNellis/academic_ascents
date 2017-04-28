@@ -22,6 +22,11 @@
     p{
         color: $txt-color-1;
     }
+    a{
+        img{
+            width: 100%;
+        }
+    } 
     @include bp($solarsystem){
         transform: scale(1);
         p{
